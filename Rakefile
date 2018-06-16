@@ -1,8 +1,15 @@
 require_relative './config/environment'
 require 'sinatra/activerecord/rake'
 
+desc 'drop into the Pry console'
 task :console do
-  require 'irb'
-  ARGV.clear
-  IRB.start
+  Pry.start
+  # require 'irb'
+  # ARGV.clear
+  # IRB.start
 end
+
+# desc 'drop into the Pry console'
+# task :console => :environment do
+#   Pry.start
+# end
